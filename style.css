@@ -1,0 +1,129 @@
+body { margin: 0;
+    padding: 0;
+    opacity: 1;
+
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* position: relative; */
+}
+
+.container::after {
+    content: '';
+    background: url(./img/bg-loteria2-i29102.jpeg) ;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+
+ .contant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .title {
+     height: 100px;
+     font-weight: bold;
+     font-size: 50px;
+     color: #281F0E;
+     margin: 30px auto;
+ }
+ span {
+     font-size: 50px;
+     font-style: italic;
+ }
+ .decript {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 134px
+ }
+label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+ .inputs {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+     margin: 10px 10px;
+     width: 30%;
+ 
+ }
+
+input {
+    outline: none;
+    width: 60px;
+    height: 30px;
+    margin: 30px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #FFF583;
+}
+
+.btn button {
+    color: #281F0E;
+    width: 210px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: #61B028;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    border: none;
+
+
+}
+/* button:focus {
+    box-shadow: 5px 5px 5px #281F0E;
+}
+button:hover {
+    box-shadow: 5px 5px 5px #281F0E;
+} */
+
+button {
+    border-color: #61B028;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #61B028 inset, 0 0 0 0 #FFE36A;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+  }
+  button:hover {
+    box-shadow: 0 0 10px 0 #FFE36A inset, 0 0 10px 4px #61B028;
+  }
+
+.balls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+.num {
+
+    background: url(./img/ball.jpg);
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 7px 7px 7px #281F0E;
+}
