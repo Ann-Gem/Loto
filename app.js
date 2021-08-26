@@ -1,5 +1,3 @@
-//Set
-
 let commonNum = 36;
 let num = 6;
 let res = [];
@@ -8,7 +6,7 @@ const mySet = new Set();
 
 let generateSet = () => {
     res = [];
-    while(mySet.size<=num) { 
+    while(mySet.size<=num) {
         mySet.add(Math.round(Math.random()*(commonNum-1) + 1));
     }
     res = [...mySet];
@@ -33,12 +31,11 @@ let printBall = () => {
     iter++;
 }
 let btn = document.querySelector('button');
-btn.addEventListener('click', ()=> {  
+btn.addEventListener('click', ()=> {
     commonNum = Number(common.value);
     num = Number(amount.value);
     generateSet();
     balls.innerHTML='';
     run = setInterval(printBall, 1000);
-
 })
 
