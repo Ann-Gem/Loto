@@ -1,6 +1,11 @@
-let commonNum = 36;
-let num = 6;
 let res = [];
+let run=0;
+let iter=1;
+
+const amount = document.getElementById('amount');
+const common = document.getElementById('common');
+const balls = document.getElementsByClassName('balls')[0];
+const btn = document.querySelector('button');
 
 const mySet = new Set();
 
@@ -13,29 +18,26 @@ let generateSet = () => {
     mySet.clear();
 }
 console.log(res);
-let run=0;
-let iter=1;
-
-const amount = document.getElementById('amount');
-const common = document.getElementById('common');
-const balls = document.getElementsByClassName('balls')[0];
 
 let printBall = () => {
     if(iter > num) {
         clearInterval(run);
         iter=1;
+        btn.removeAttribute('disabled');
      return false;
     }
-    ind = Math.round(Math.random()*8 + 1)
-        balls.insertAdjacentHTML('beforeend',`<div class="num ball">${res[iter]}</div>`);
+    balls.insertAdjacentHTML('beforeend',`<div class="num ball">${res[iter]}</div>`);
     iter++;
 }
-let btn = document.querySelector('button');
+
 btn.addEventListener('click', ()=> {
-    commonNum = Number(common.value);
-    num = Number(amount.value);
-    generateSet();
-    balls.innerHTML='';
-    run = setInterval(printBall, 1000);
+    btn.setAttribute("disabled", true);
+    if(common.value > 0 || amount > 0) {
+        commonNum = Number(common.value);
+        num = Number(amount.value);
+        generateSet();
+        balls.innerHTML='';
+        run = setInterval(printBall, 1000);
+    }
 })
 
